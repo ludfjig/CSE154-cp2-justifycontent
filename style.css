@@ -9,7 +9,6 @@
     the javascript in main.js to change the layout of the boxes.
 
  */
-
 body {
   width: 60%;
   margin-left: auto;
@@ -43,7 +42,7 @@ main, #container, .box {
   border-radius: 10px;
 }
 
-main, aside {
+main, aside, #container {
   display: flex;
 }
 
@@ -56,7 +55,6 @@ button {
   height: 50px;
   border-radius: 10px;
   box-shadow: 5px 5px 0px black;
-
 }
 
 button:hover {
@@ -85,7 +83,6 @@ button:hover, #container {
 }
 
 #container {
-  display: flex;
   width: 90vw;
   height: 90vh;
   align-items: center;
