@@ -1,3 +1,15 @@
+/*
+    Name: Ludvig Liljenberg
+    Date: 04/19/2019
+    Section: CSE 154 AF
+
+    This css file styles the index.html site. It gives the site a black look
+    with pink and blue colored accents. It also contains the classes
+    .space-evenly, .space-between and .space-around which ared used by
+    the javascript in main.js to change the layout of the boxes.
+
+ */
+
 body {
   width: 60%;
   margin-left: auto;
@@ -8,17 +20,10 @@ body {
 
 main {
   padding: 10px;
-  display: flex;
   background-color: gray;
 }
 
-main, #container, .box {
-  border: 3px black solid;
-  border-radius: 10px;
-}
-
 aside {
-  display: flex;
   flex-direction: column;
   padding: 30px;
   width: 300px;
@@ -33,29 +38,36 @@ h1 {
   text-shadow: 3px 3px 5px black;
 }
 
-button {
-  background-color: fuchsia;  /* redundant*/
-  border: 3px solid aqua;
-  color: white;
-  height: 50px;
+main, #container, .box {
+  border: 3px black solid;
   border-radius: 10px;
 }
 
+main, aside {
+  display: flex;
+}
+
+button, .box {
+  background-color: fuchsia;
+}
+
+button {
+  border: 3px solid aqua;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px black;
+
+}
+
 button:hover {
-  background-color: aqua;
   border: 3px solid fuchsia;
 }
 
-#container {
-  display: flex;
+button:hover, #container {
   background-color: aqua;
-  width: 90vw;
-  height: 90vh;
-  align-items: center;
 }
 
 .box {
-  background-color: fuchsia;
   width: 1em;
   height: 1em;
 }
@@ -70,4 +82,12 @@ button:hover {
 
 .space-around {
   justify-content: space-around;
+}
+
+#container {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  align-items: center;
+  overflow: hidden;
 }
