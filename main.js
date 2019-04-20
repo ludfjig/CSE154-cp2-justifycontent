@@ -4,8 +4,8 @@
 //
 // This script adds functionality to a dropdown and a
 // button in index.html. It specifically allowes the user to change
-// the css property "justify-content" in a div on the site. It also allowes
-// the user to add "boxes" to the div with a press of a button.
+// the css property "justify-content" in a section on the site. It also allowes
+// the user to add "boxes" to the section with a press of a button.
 
 (function() {
   "use strict";
@@ -21,7 +21,7 @@
   }
 
   /**
-   * Adds a new "box" html element, as a child of div #container
+   * Adds a new "box" DOM element, as a child of section #container
    */
   function addBox() {
     let newBox = document.createElement("div");
@@ -30,14 +30,15 @@
   }
 
   /**
-   * Changes the css property "justify-content" of the div #container
+   * Changes the css property "justify-content" of the section #container
    * based on the selected vale in the dropdown menu
    */
   function changeCss() {
     let d = document.getElementById("container");
-    // replace the current class with the class with same name as the selected
-    // option in the dropdown menu value
     d.className = this.value;
+    // NOTE. I used .className instead of .classList deliberatly, because
+    // it automatically removes the old class, which means I not have to keep
+    // track of which one to remove, nor do something hackly like d.classList = "";
   }
 
 })();
